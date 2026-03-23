@@ -31,11 +31,11 @@ const scale = (Math.min(scaleX*1.5, scaleY*1.5));
 const sprites = [];
 for (let i = 0; i < 13; i++) {
     const img = new Image();
-    img.src = "SEM_FUNDO_SK8/" + i + " Media.png";
+    img.src = "SEM_FUNDO_SK8/" + i + "Media.png";
     sprites.push(img);
 }
 const img = new Image();
-img.src = "SEM_FUNDO_SK8/bg5 2 Media.png";
+img.src = "SEM_FUNDO_SK8/bg5Media.png";
 sprites.push(img);
 
 
