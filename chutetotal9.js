@@ -132,8 +132,8 @@ if (!isMobile){
     document.addEventListener("mousedown", () => clicando = true);
     document.addEventListener("mouseup", () => clicando = false);
 }else {
-            document.addEventListener("touchstart", ()=>clicando = true);
-            document.addEventListener("touchend", ()=>clicando = false);
+    document.addEventListener("touchstart", ()=>clicando = true);
+    document.addEventListener("touchend", ()=>clicando = false);
 }
 
 
