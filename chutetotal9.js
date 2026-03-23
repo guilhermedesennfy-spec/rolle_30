@@ -78,6 +78,9 @@ function Obj(frame, x, y){
     };
 
     this.anim = function(tick,inicio,frames){
+        if (inicio ==8){
+            this.frame =8;
+        }
         
         this.tick++;
         if (this.tick === tick){
