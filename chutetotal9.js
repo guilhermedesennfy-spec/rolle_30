@@ -132,9 +132,7 @@ if (!isMobile){
     document.addEventListener("mousedown", () => clicando = true);
     document.addEventListener("mouseup", () => clicando = false);
 }else {
-            document.addEventListener("touchmove", ()=>
-                clicando = true);
-
+            document.addEventListener("touchstart", ()=>clicando = true);
             document.addEventListener("touchend", ()=>clicando = false);
 }
 
@@ -157,11 +155,10 @@ function jogo(){
 
             }
 
-            }else{
+        }else{
                 sk.anim(11,0,12);
-            }
-            
-            
+        }
+                   
                 
     }else{   
             
@@ -169,13 +166,6 @@ function jogo(){
         sk.position[1]-= H*0.002*scale
 
     }
-
-
-                
-   
-
-     
-    
 
 
     requestAnimationFrame(jogo);
