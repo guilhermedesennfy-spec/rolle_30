@@ -159,7 +159,7 @@ function jogo(){
             }
 
         }else{
-                sk.anim(11,0,12);
+                sk.anim(11,0,8);
         }
                    
                 
