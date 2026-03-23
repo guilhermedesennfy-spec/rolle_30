@@ -135,7 +135,7 @@ if (!isMobile){
             document.addEventListener("touchmove", ()=>
                 clicando = true);
 
-            document.addEventListener("touchend", (e)=>clicando = false);
+            document.addEventListener("touchend", ()=>clicando = false);
 }
 
 
