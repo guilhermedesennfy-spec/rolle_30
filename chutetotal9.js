@@ -108,8 +108,8 @@ function move_bg(bg, bg2){
     }
 
     if (bg2.position[0] > -(bg.image.width) * scale){
-        let temp = bg.position[0]+((bg.image.width) * scale);
-        bg2.position[0] = temp;
+        //let temp = bg.position[0]+((bg.image.width) * scale);
+        bg2.position[0] -= 2 * scale;
     } else {
         bg2.position[0] = bg.image.width * scale;
     }
