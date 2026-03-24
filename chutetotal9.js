@@ -147,11 +147,11 @@ function jogo(){
 
     move_bg(bg, bg2);
     if (!clicando){
-        if ((sk.position[1]<H*0.5*scale)){//&&(sk.position[1]>H*0.65)
+        if ((sk.position[1]<H*0.2*scale)){//&&(sk.position[1]>H*0.65)
             sk.anim(5,8,12)
-            sk.position[1]+= H*0.008*scale;
-            if ((sk.position[1]>=H*0.5*scale)){
-                sk.position[1]= H*0.5*scale
+            sk.position[1]+= H*0.006*scale;
+            if ((sk.position[1]>H*0.2*scale)){
+                sk.position[1]= H*0.2*scale
                 //sk.frame=0;
 
             }
