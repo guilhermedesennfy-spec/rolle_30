@@ -107,7 +107,7 @@ function Obj(frame, x, y){
             bg.position[0] =0;
         }
 
-        if (bg2.position[0] > 0){
+        if (bg2.position[0] >=0){
             let temp = bg.position[0]+((bg.image.width) * scale);
             bg2.position[0] =temp; //-= 2 * scale;
         } 
