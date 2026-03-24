@@ -92,23 +92,22 @@ function Obj(frame, x, y){
 
     }
 
-    function move_bg(bg, bg2){
-        const limite = -(bg.image.width) * scale;
 
-        if (bg.position[0] > limite){
-            bg.position[0] -= 2 * scale;
-        } else {
-            bg.position[0] =0;
-        }
+}
 
-        if (bg2.position[0] >=(-2* scale)){
-            let temp = bg.position[0]+((bg.image.width) * scale);
-            bg2.position[0] =temp; //-= 2 * scale;
-        } 
-        //else {
-        //    bg2.position[0] = bg.image.width * scale;
-    // }
+function move_bg(bg, bg2){
+    const limite = -(bg.image.width) * scale;
+
+    if (bg.position[0] > limite){
+        bg.position[0] -= 2 * scale;
+    } else {
+        bg.position[0] =0;
     }
+
+    if (bg2.position[0] >=(-2* scale)){
+        let temp = bg.position[0]+((bg.image.width) * scale);
+        bg2.position[0] =temp; //-= 2 * scale;
+    } 
 }
 
 
