@@ -107,7 +107,7 @@ function move_bg(bg, bg2){
         bg.position[0] =(bg.image.width) * scale;
     }
 
-    if (bg2.position[0] > -(bg.image.width) * scale){
+    if (bg2.position[0] > 0{
         let temp = bg.position[0]+((bg.image.width) * scale);
         bg2.position[0] =temp; //-= 2 * scale;
     } else {
@@ -122,8 +122,8 @@ function move_bg(bg, bg2){
 
 
 var bg = new Obj(13, 0, 0);
-var bg2 = new Obj(13, bg.image.width*scale, 0);
-var sk = new Obj(0, W/4, H*0.64*scale);
+var bg2 = new Obj(13, bg.image.width, 0);
+var sk = new Obj(0, W/4, H*0.64);
 
 
 
