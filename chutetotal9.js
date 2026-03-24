@@ -75,7 +75,7 @@ function Obj(frame, x, y){
             this.image.width,
             this.image.height
         );}
-    };
+    }
 
     this.anim = function(tick,inicio,frames){
         
@@ -90,12 +90,12 @@ function Obj(frame, x, y){
         }
         this.image = sprites[this.frame];
 
-    };
+    }
 
 
 
     
-}
+
 
 
 function move_bg(bg, bg2){
