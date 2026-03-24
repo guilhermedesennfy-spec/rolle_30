@@ -44,7 +44,7 @@ function Obj(frame, x, y){
     this.image = sprites[frame];
 
 
-    this.position = [x * scale, y * scale];
+    this.position = [x,y]//[x * scale, y * scale];
     this.frame = 0;
     this.tick = 0;
     this.pontos = 0;
@@ -72,8 +72,8 @@ function Obj(frame, x, y){
             this.image,
             this.position[0],
             this.position[1],
-            this.image.width*scale,
-            this.image.height*scale
+            this.image.width,
+            this.image.height
         );}
     };
 
