@@ -44,7 +44,7 @@ function Obj(frame, x, y){
     this.image = sprites[frame];
 
 
-    this.position = [x,y]//[x * scale, y * scale];
+    this.position = [x,y];//[x * scale, y * scale];
     this.frame = 0;
     this.tick = 0;
     this.pontos = 0;
@@ -108,8 +108,8 @@ function move_bg(bg, bg2){
     }
 
     if (bg2.position[0] > -(bg.image.width) * scale){
-        //let temp = bg.position[0]+((bg.image.width) * scale);
-        bg2.position[0] -= 2 * scale;
+        let temp = bg.position[0]+((bg.image.width) * scale);
+        bg2.position[0] =temp; //-= 2 * scale;
     } else {
         bg2.position[0] = bg.image.width * scale;
     }
