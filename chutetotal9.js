@@ -3,7 +3,7 @@ const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAg
 
 
 const BASE_W = 800;
-const BASE_H = 2000;
+const BASE_H = 1295;
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -78,9 +78,6 @@ function Obj(frame, x, y){
     };
 
     this.anim = function(tick,inicio,frames){
-        if (inicio ==8){
-            this.frame =8;
-        }
         
         this.tick++;
         if (this.tick === tick){
@@ -155,6 +152,7 @@ function jogo(){
             sk.position[1]+= H*0.008*scale
             if ((sk.position[1]>H*0.64*scale)){
                 sk.position[1]= H*0.64*scale
+                sk.frame=0;
 
             }
 
@@ -164,7 +162,7 @@ function jogo(){
                    
                 
     }else{   
-            
+        sk.frame = 8;    
         sk.anim(5,8,12)
         sk.position[1]-= H*0.002*scale
 
