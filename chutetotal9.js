@@ -104,7 +104,7 @@ function move_bg(bg, bg2){
     if (bg.position[0] > limite){
         bg.position[0] -= 2 * scale;
     } else {
-        bg.position[0] =(bg.image.width) * scale;
+        bg.position[0] =0;
     }
 
     if (bg2.position[0] > 0{
