@@ -101,7 +101,7 @@ function Obj(frame, x, y){
     function move_bg(bg, bg2){
         const limite = -(bg.image.width) * scale;
 
-        if (bg.position[0] > limite){
+        if (bg.position[0] >= limite){
             bg.position[0] -= 2 * scale;
         } else {
             bg.position[0] =0;
@@ -124,8 +124,8 @@ function Obj(frame, x, y){
 
 
 var bg = new Obj(13, 0, 0);
-var bg2 = new Obj(13, bg.image.width, 0);
-var sk = new Obj(0, W/4, H*0.64);
+var bg2 = new Obj(13, bg.image.width*scale, 0);
+var sk = new Obj(0, W/4, H*0.5*scale);
 
 
 
@@ -151,11 +151,11 @@ function jogo(){
 
     move_bg(bg, bg2);
     if (!clicando){
-        if ((sk.position[1]<H*0.64*scale)){//&&(sk.position[1]>H*0.65)
+        if ((sk.position[1]<H*0.5*scale)){//&&(sk.position[1]>H*0.65)
             sk.anim(5,8,12)
             sk.position[1]+= H*0.008*scale;
-            if ((sk.position[1]>H*0.64*scale)){
-                sk.position[1]= H*0.64*scale
+            if ((sk.position[1]>H*0.5*scale)){
+                sk.position[1]= H*0.5*scale
                 sk.frame=0;
 
             }
