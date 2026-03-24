@@ -110,9 +110,10 @@ function move_bg(bg, bg2){
     if (bg2.position[0] > 0{
         let temp = bg.position[0]+((bg.image.width) * scale);
         bg2.position[0] =temp; //-= 2 * scale;
-    } else {
-        bg2.position[0] = bg.image.width * scale;
-    }
+    } 
+    //else {
+    //    bg2.position[0] = bg.image.width * scale;
+   // }
 }
 
 
@@ -151,7 +152,7 @@ function jogo(){
     if (!clicando){
         if ((sk.position[1]<H*0.64*scale)){//&&(sk.position[1]>H*0.65)
             sk.anim(5,8,12)
-            sk.position[1]+= H*0.008*scale
+            sk.position[1]+= H*0.008*scale;
             if ((sk.position[1]>H*0.64*scale)){
                 sk.position[1]= H*0.64*scale
                 sk.frame=0;
@@ -164,8 +165,8 @@ function jogo(){
                    
                 
     }else{       
-        sk.anim(5,8,12)
-        sk.position[1]-= H*0.002*scale
+        sk.anim(5,8,12);
+        sk.position[1]-= H*0.002*scale;
 
     }
 
