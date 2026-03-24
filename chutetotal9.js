@@ -121,8 +121,8 @@ function move_bg(bg, bg2){
 
 
 var bg = new Obj(13, 0, 0);
-var bg2 = new Obj(13, bg.image.width, 0);
-var sk = new Obj(0, W/4, H*0.64);
+var bg2 = new Obj(13, bg.image.width*scale, 0);
+var sk = new Obj(0, W/4, H*0.64*scele);
 
 
 
