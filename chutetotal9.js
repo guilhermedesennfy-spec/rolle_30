@@ -99,16 +99,16 @@ function Obj(frame, x, y){
 
 
 function move_bg(bg, bg2){
-    const limite = -(W*1.1) * scale;
+    const limite = -(bg.image.width) * scale;
 
     if (bg.position[0] > limite){
-        bg.position[0] -= 1 * scale;
+        bg.position[0] -= 2 * scale;
     } else {
-        bg.position[0] =(W*1.1) * scale;
+        bg.position[0] =(bg.image.width) * scale;
     }
 
-    if (bg2.position[0] > -(W*1.1) * scale){
-        bg2.position[0] -= 1 * scale;
+    if (bg2.position[0] > -(bg.image.width) * scale){
+        bg2.position[0] -= 2 * scale;
     } else {
         bg2.position[0] = bg.image.width * scale;
     }
@@ -162,8 +162,7 @@ function jogo(){
         }
                    
                 
-    }else{   
-        sk.frame = 8;    
+    }else{       
         sk.anim(5,8,12)
         sk.position[1]-= H*0.002*scale
 
