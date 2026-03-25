@@ -1,6 +1,4 @@
-// ===============================
-// CONFIGURAÇÕES INICIAIS
-// ===============================
+
 
 const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
 
@@ -20,14 +18,12 @@ const scaleX = W / BASE_W;
 const scaleY = H / BASE_H;
 const scale = Math.min(scaleX * 1.5, scaleY * 1.5);
 
-// Constantes pré-calculadas
+
 const GRAVITY = H * 0.006;
 const JUMP = H * 0.002 * scale;
 const SK_BASE_Y = H * 0.5;
 
-// ===============================
-// CARREGAMENTO DE IMAGENS
-// ===============================
+
 
 function loadImages(paths) {
     return Promise.all(
@@ -46,9 +42,7 @@ const spritePaths = [
     "SEM_FUNDO_SK8/bg5Media.png"
 ];
 
-// ===============================
-// OBJETO BASE
-// ===============================
+
 
 class Obj {
     constructor(image, x, y, tipo = "sprite") {
@@ -84,9 +78,7 @@ class Obj {
     }
 }
 
-// ===============================
-// FUNÇÃO DE MOVIMENTO DO FUNDO
-// ===============================
+
 
 function moveBackground(bg, bg2) {
     const limite = -(bg.image.width) * scale;
@@ -99,9 +91,7 @@ function moveBackground(bg, bg2) {
     bg2.position[0] = bg.position[0] + (bg.image.width * scale);
 }
 
-// ===============================
-// LOOP DO JOGO
-// ===============================
+
 
 let clicando = false;
 let bg, bg2, sk, sprites;
@@ -112,7 +102,7 @@ function startGame(loadedSprites) {
     const bgImg = sprites[13];
 
     bg = new Obj(bgImg, 0, 0, "bg");
-    bg2 = new Obj(bgImg, bgImg.width * scale, 0, "bg");
+    bg2 = new Obj(bgImg, bgImg.width, 0, "bg");// * scale
 
     sk = new Obj(sprites[0], W / 4, SK_BASE_Y);
 
@@ -146,9 +136,7 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-// ===============================
-// CONTROLES
-// ===============================
+
 
 if (!isMobile) {
     document.addEventListener("mousedown", () => clicando = true);
@@ -158,8 +146,6 @@ if (!isMobile) {
     document.addEventListener("touchend", () => clicando = false);
 }
 
-// ===============================
-// INICIAR
-// ===============================
+
 
 loadImages(spritePaths).then(startGame);
