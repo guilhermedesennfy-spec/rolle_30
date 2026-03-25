@@ -81,14 +81,14 @@ class Obj {
 
 
 function moveBackground(bg, bg2) {
-    const limite = -(bg.image.width) * scale;
+    const limite = -W;//(bg.image.width) * scale;
 
     bg.position[0] -= 2 * scale;
     if (bg.position[0] <= limite) {
         bg.position[0] = 0;
     }
 
-    bg2.position[0] = bg.position[0] + (bg.image.width * scale);
+    bg2.position[0] = bg.position[0] + W;//(bg.image.width * scale);
 }
 
 
@@ -102,7 +102,7 @@ function startGame(loadedSprites) {
     const bgImg = sprites[13];
 
     bg = new Obj(bgImg, 0, 0, "bg");
-    bg2 = new Obj(bgImg, bgImg.width, 0, "bg");// * scale
+    bg2 = new Obj(bgImg,W , 0, "bg");// * scale//bgImg.width
 
     sk = new Obj(sprites[0], W / 4, SK_BASE_Y);
 
