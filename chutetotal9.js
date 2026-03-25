@@ -121,7 +121,7 @@ function move_bg(bg, bg2){
 
 var bg = new Obj(13, 0, 0);
 var bg2 = new Obj(13, bg.image.width*scale, 0);
-var sk = new Obj(0, W/4, H*(0.45));
+var sk = new Obj(0, W/4, H*(0.5));
 
 
 
@@ -147,11 +147,11 @@ function jogo(){
 
     move_bg(bg, bg2);
     if (!clicando){
-        if ((sk.position[1]<H*0.45)){//&&(sk.position[1]>H*0.65)//*scale
+        if ((sk.position[1]<H*0.5)){//&&(sk.position[1]>H*0.65)//*scale
             sk.anim(5,8,12)
             sk.position[1]+= H*0.006;//*scale
-            if ((sk.position[1]>H*0.45)){//*scale
-                sk.position[1]= H*0.45;//*scale
+            if ((sk.position[1]>H*0.5)){//*scale
+                sk.position[1]= H*0.5;//*scale
                 //sk.frame=0;
 
             }
